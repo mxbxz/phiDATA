@@ -29,8 +29,8 @@
   .search input:focus{border-color:var(--accent)}
   .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
   .count{color:var(--muted);font-size:13px;margin:14px 0 12px}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding-bottom:40px}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;gap:12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:12px;padding-bottom:40px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;gap:12px;min-width:0}
   .cover{width:84px;height:84px;flex:0 0 84px;border-radius:9px;overflow:hidden;background:#EDEFF3}
   .cover img{width:100%;height:100%;object-fit:cover;display:block}
   .body{min-width:0;flex:1;display:flex;flex-direction:column}
@@ -43,11 +43,10 @@
   .lv-ez{background:var(--ez)} .lv-hd{background:var(--hd)}
   .lv-in{background:var(--in)} .lv-at{background:var(--at)}
   .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px 0}
-  @media(min-width:760px){ .grid{grid-template-columns:repeat(3,1fr)} }
-  @media(min-width:1000px){ .grid{grid-template-columns:repeat(4,1fr)} }
-  @media(max-width:520px){
-    .grid{grid-template-columns:1fr;gap:10px}
-    .cover{width:72px;height:72px;flex-basis:72px}
+  @media(max-width:480px){
+    .wrap{padding:0 14px}
+    .cover{width:68px;height:68px;flex-basis:68px}
+    .card{padding:10px;gap:10px}
   }
 </style>
 </head>
